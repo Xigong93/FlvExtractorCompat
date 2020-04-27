@@ -30,8 +30,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     def exoplayer_version = "2.10.1"
-    // 新版本的引入了androidx.annotation 应该是没问题的
-    api "com.google.android.exoplayer:exoplayer-ui:$exoplayer_version"
     api "com.google.android.exoplayer:exoplayer-core:$exoplayer_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
