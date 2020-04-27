@@ -46,6 +46,7 @@ class PlayFragment : Fragment() {
         playerView.player = exoplayer
         val dataSourceFactory = DefaultHttpDataSourceFactory(Util.getUserAgent(requireContext(), requireContext().packageName))
         val mediaSourceFactory = ProgressiveMediaSource.Factory(dataSourceFactory, FlvExtractorCompat.FACTORY)
+        exoplayer?.playWhenReady = true
         exoplayer?.prepare(mediaSourceFactory.createMediaSource(Uri.parse(playUrl)))
     }
 
